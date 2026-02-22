@@ -17,15 +17,10 @@ export default function Footer() {
                     <div>
                         <span className="text-white/20 text-[10px] font-semibold tracking-[0.25em] uppercase block mb-4">Links</span>
                         <div className="space-y-3">
-                            {['Events', 'Timeline', 'Sponsors', 'Registration', 'About'].map((link) => (
-                                <a
-                                    key={link}
-                                    href={`#${link.toLowerCase()}`}
-                                    className="block text-white/35 text-sm font-inter hover:text-brand-green transition-colors duration-300"
-                                >
-                                    {link}
-                                </a>
-                            ))}
+                            <a href="#timeline" className="block text-white/35 text-sm font-inter hover:text-brand-green transition-colors duration-300">Event Timeline</a>
+                            <a href="#sponsors" className="block text-white/35 text-sm font-inter hover:text-brand-green transition-colors duration-300">Sponsors</a>
+                            <a href="#about" className="block text-white/35 text-sm font-inter hover:text-brand-green transition-colors duration-300">About</a>
+                            <a href="https://forms.gle/ML796iJ98SVKFyXX6" target="_blank" rel="noopener noreferrer" className="block text-white/35 text-sm font-inter hover:text-brand-green transition-colors duration-300">Registration</a>
                         </div>
                     </div>
 
