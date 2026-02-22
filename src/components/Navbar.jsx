@@ -22,7 +22,7 @@ export default function Navbar() {
     const registrationLink = 'https://forms.gle/ML796iJ98SVKFyXX6';
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-4 transition-all duration-500 ${scrolled ? 'bg-dark/80 backdrop-blur-xl border-b border-white/5' : ''
+        <nav className={`fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-4 transition-all duration-500 ${scrolled || isOpen ? 'bg-dark/80 backdrop-blur-xl border-b border-white/5' : ''
             }`}>
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo — Left */}
