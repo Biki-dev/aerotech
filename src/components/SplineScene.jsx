@@ -4,16 +4,28 @@ const Spline = lazy(() => import('@splinetool/react-spline'));
 
 export default function SplineScene({ scene, className = '' }) {
     const [loaded, setLoaded] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const [widthMultiplier, setWidthMultiplier] = useState(1);
+    const [visualScale, setVisualScale] = useState(1);
     const containerRef = useRef(null);
 
-    // Track viewport size for responsive scaling
+    // On small screens:
+    // 1. Widen the canvas so the 3D camera shows the full plane
+    // 2. Scale down visually so the plane isn't oversized on screen
     useEffect(() => {
-        const mq = window.matchMedia('(max-width: 768px)');
-        setIsMobile(mq.matches);
-        const handler = (e) => setIsMobile(e.matches);
-        mq.addEventListener('change', handler);
-        return () => mq.removeEventListener('change', handler);
+        const computeDimensions = () => {
+            const vw = window.innerWidth;
+            if (vw >= 1024) {
+                setWidthMultiplier(1);
+                setVisualScale(1);
+            } else {
+                const t = (1024 - Math.max(vw, 320)) / (1024 - 320);
+                setWidthMultiplier(1 + t * 0.8);   // 100% at 1024px → 180% at 320px
+                setVisualScale(1 - t * 0.45);       // 100% at 1024px →  65% at 320px
+            }
+        };
+        computeDimensions();
+        window.addEventListener('resize', computeDimensions);
+        return () => window.removeEventListener('resize', computeDimensions);
     }, []);
 
     // Hide watermark after scene loads
@@ -67,7 +79,7 @@ export default function SplineScene({ scene, className = '' }) {
     }, [loaded]);
 
     return (
-        <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className}`}>
+        <div ref={containerRef} className={`relative w-full h-full overflow-visible ${className}`}>
             {/* Loading state */}
             {!loaded && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
@@ -82,11 +94,12 @@ export default function SplineScene({ scene, className = '' }) {
                     scene={scene}
                     onLoad={() => setLoaded(true)}
                     style={{
-                        width: '100%',
+                        width: `${widthMultiplier * 100}%`,
                         height: '100%',
+                        marginLeft: `${(1 - widthMultiplier) * 50}%`,
                         opacity: loaded ? 1 : 0,
                         transition: 'opacity 0.8s ease-in-out',
-                        transform: isMobile ? 'scale(0.7)' : 'scale(1.25)',
+                        transform: `scale(${visualScale})`,
                     }}
                 />
             </Suspense>
