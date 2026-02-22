@@ -66,8 +66,8 @@ export default function Hero() {
             </div>
 
             {/* ─── 3D Spline Scene ─── */}
-            <div className="relative z-20 mt-0 md:-mt-[199px] w-full md:max-w-5xl mx-auto animate-fade-in delay-300" style={{ opacity: 0 }}>
-                <div className="w-full aspect-square md:aspect-[4/3] overflow-hidden">
+            <div className="relative z-20 mt-0 md:-mt-[170px] w-full md:max-w-5xl mx-auto animate-fade-in delay-300" style={{ opacity: 0 }}>
+                <div className="w-full aspect-square md:aspect-[5/3] overflow-hidden">
                     <SplineScene scene="https://prod.spline.design/ab3TbnMwWnvvEoio/scene.splinecode" />
                 </div>
             </div>
@@ -94,13 +94,13 @@ export default function Hero() {
 
             {/* ─── Floating Text — Desktop (positioned absolutely) ─── */}
             <div className="hidden lg:block">
-                <div className="absolute bottom-44 left-10 z-10 max-w-xs animate-slide-up delay-500" style={{ opacity: 0 }}>
+                <div className="absolute bottom-[120px] left-10 z-10 max-w-xs animate-slide-up delay-500" style={{ opacity: 0 }}>
                     <p className="text-white/30 text-[10px] font-inter tracking-[0.2em] uppercase mb-2">// Welcome</p>
                     <p className="text-white/60 text-sm font-inter leading-relaxed">
                         The ultimate aeromodelling workshop and competition. Pushing the boundaries of flight, engineering, and innovation.
                     </p>
                 </div>
-                <div className="absolute bottom-52 right-10 z-10 text-right animate-slide-up delay-700" style={{ opacity: 0 }}>
+                <div className="absolute bottom-[140px] right-10 z-10 text-right animate-slide-up delay-700" style={{ opacity: 0 }}>
                     <p className="text-white/30 text-[10px] font-inter tracking-[0.2em] uppercase mb-1">// Ignite your</p>
                     <p className="text-white font-anton text-2xl xl:text-3xl uppercase tracking-wide leading-tight">
                         AEROMODELLING<br />JOURNEY
@@ -108,11 +108,20 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Scroll indicator */}
-            <div className="absolute bottom-6 sm:bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in delay-1000" style={{ opacity: 0 }}>
+            {/* ─── Register + Scroll — centered at bottom ─── */}
+            <div className="absolute bottom-3 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-30 animate-fade-in delay-1000" style={{ opacity: 0 }}>
+                <a
+                    href="https://forms.gle/xhpM4GWUgFcwUxBZ8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 border border-white/10 hover:border-brand-green/40 rounded-full px-4 sm:px-5 py-1.5 sm:py-2 transition-all duration-300"
+                >
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse-glow" />
+                    <span className="text-white/50 group-hover:text-brand-green text-[9px] sm:text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase transition-colors duration-300">Register</span>
+                </a>
                 <span className="text-white/20 text-[9px] font-inter tracking-[0.3em] uppercase">Scroll</span>
                 <div className="w-px h-7 bg-gradient-to-b from-white/20 to-transparent" />
-            </div>
+            </div>  
         </section>
     );
 }
