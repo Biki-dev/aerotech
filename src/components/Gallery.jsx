@@ -1,12 +1,10 @@
 const images = [
     { src: 'gallery/1.jpg', alt: 'Aerotech event photo 1', span: 'md:col-span-2 md:row-span-2' },
     { src: 'gallery/2.jpeg', alt: 'Aerotech event photo 2', span: '' },
-    { src: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790095174/20260226_113351_fpiers.jpg', alt: 'Aerotech event photo 3', span: '' },
-    { src: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790095442/20260226_111550_ehgzyl.jpg', alt: 'Aerotech event photo 3', span: '' },
-    { src: 'gallery/3.jpg', alt: 'Aerotech event photo 5', span: '' },
-    { src: 'gallery/4.jpeg', alt: 'Aerotech event photo 6', span: '' },
-    { src: 'gallery/5.jpeg', alt: 'Aerotech event photo 7', span: '' },
-    { src: 'gallery/6.jpeg', alt: 'Aerotech event photo 8', span: '' },
+    { src: 'gallery/3.jpg', alt: 'Aerotech event photo 3', span: '' },
+    { src: 'gallery/4.jpeg', alt: 'Aerotech event photo 4', span: '' },
+    { src: 'gallery/5.jpeg', alt: 'Aerotech event photo 5', span: '' },
+    { src: 'gallery/6.jpeg', alt: 'Aerotech event photo 6', span: '' },
 ];
 
 export default function Gallery() {
