@@ -34,14 +34,12 @@ function PartnerCard({ sponsor, index, featured = false }) {
         >
             <div className="sponsor-card__topline">
                 <span className="sponsor-card__index">0{index + 1}</span>
-                <span className="sponsor-card__status"><i /> 2026 partner</span>
             </div>
             <div className="sponsor-card__logo-wrap">
                 <span className="sponsor-card__halo" />
                 <img src={sponsor.logo} alt={sponsor.name} className="sponsor-card__logo" />
             </div>
             <div className="sponsor-card__footer">
-                <span>{sponsor.name}</span>
                 <span className="sponsor-card__tag">{sponsor.tag}</span>
             </div>
         </article>
