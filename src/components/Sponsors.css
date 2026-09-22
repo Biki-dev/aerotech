@@ -73,10 +73,9 @@
 .sponsor-card__status i { display: inline-block; width: 0.34rem; height: 0.34rem; margin-right: 0.3rem; border-radius: 50%; background: #7bc144; box-shadow: 0 0 0 0 rgba(123, 193, 68, 0.6); animation: sponsor-pulse 2.2s infinite; }
 .sponsor-card__logo-wrap { position: relative; display: grid; place-items: center; min-height: 5rem; }
 .sponsor-card--featured .sponsor-card__logo-wrap { min-height: 10rem; }
-.sponsor-card__halo { position: absolute; width: 5rem; height: 5rem; border: 1px solid rgba(123, 193, 68, 0.2); border-radius: 50%; box-shadow: 0 0 2.5rem rgba(123, 193, 68, 0.07); transition: transform 500ms ease; }
 .sponsor-card--featured .sponsor-card__halo { width: 9rem; height: 9rem; }
-.sponsor-card:hover .sponsor-card__halo { transform: scale(1.18); }
-.sponsor-card__logo { position: relative; z-index: 1; width: auto; max-width: 78%; max-height: 4.5rem; object-fit: contain; opacity: 0.92; }
+.sponsor-card:hover .sponsor-card__logo { transform: scale(1.18); }
+.sponsor-card__logo { position: relative; z-index: 1; width: auto; max-width: 78%; max-height: 4.5rem; object-fit: contain; opacity: 0.92; transition: transform 500ms ease, opacity 500ms ease; }
 .sponsor-card--featured .sponsor-card__logo { max-height: 8rem; max-width: 75%; }
 .sponsor-card__footer { align-items: end; padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.7); font-size: 0.7rem; letter-spacing: 0.07em; }
 .sponsor-card__tag { max-width: 55%; color: rgba(123, 193, 68, 0.7); font-size: 0.52rem; text-align: right; text-transform: uppercase; letter-spacing: 0.12em; }
@@ -88,7 +87,7 @@
 .sponsor-archive__track { display: flex; width: max-content; gap: 0.7rem; animation: sponsor-marquee 28s linear infinite; }
 .sponsor-archive:hover .sponsor-archive__track { animation-play-state: paused; }
 .archive-pill { display: flex; align-items: center; gap: 0.8rem; min-width: 12rem; padding: 0.7rem 1rem; border: 1px solid rgba(255, 255, 255, 0.07); background: rgba(255, 255, 255, 0.025); }
-.archive-pill img { width: 3.8rem; height: 1.8rem; object-fit: contain; filter: grayscale(1); opacity: 0.5; }
+.archive-pill img { width: 3.8rem; height: 1.8rem; object-fit: contain; opacity: 0.5; }
 .archive-pill span { color: rgba(255, 255, 255, 0.43); font-size: 0.65rem; letter-spacing: 0.05em; white-space: nowrap; }
 .sponsors-ghost-year { position: absolute; right: -1rem; bottom: -4rem; z-index: -1; color: rgba(255, 255, 255, 0.018); font-family: var(--font-anton); font-size: min(32rem, 48vw); line-height: 0.8; pointer-events: none; }
 

@@ -36,7 +36,7 @@ function PartnerCard({ sponsor, index, featured = false }) {
                 <span className="sponsor-card__index">0{index + 1}</span>
             </div>
             <div className="sponsor-card__logo-wrap">
-                <span className="sponsor-card__halo" />
+              
                 <img src={sponsor.logo} alt={sponsor.name} className="sponsor-card__logo" />
             </div>
             <div className="sponsor-card__footer">
