@@ -32,7 +32,7 @@ export default function Gallery() {
                                 src={`${import.meta.env.BASE_URL}${img.src}`}
                                 alt={img.alt}
                                 className="w-full h-full object-cover transition-all duration-700 ease-out
-                                           grayscale group-hover:grayscale-0
+                                           group-hover:grayscale-0
                                            scale-105 group-hover:scale-100"
                                 loading="lazy"
                             />
