@@ -4,6 +4,7 @@ import AeroLogo from './AeroLogo';
 const navLinks = [
     { label: 'TIMELINE', href: '#timeline' },
     { label: 'SPONSORS', href: '#sponsors' },
+    { label: 'TEAM', href: '#team' },
     { label: 'GALLERY', href: '#gallery' },
     { label: 'ABOUT', href: '#about' },
 ];
