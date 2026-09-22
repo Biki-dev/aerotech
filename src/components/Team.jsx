@@ -1,14 +1,14 @@
 import './Team.css';
 
 const teamMembers = [
-    { name: 'Aarav Mehta', role: 'Event Director', image: '/team/member-1.jpg' },
-    { name: 'Maya Sharma', role: 'Aviation Lead', image: '/team/member-2.jpg' },
-    { name: 'Rohan Kapoor', role: 'Operations Lead', image: '/team/member-3.jpg' },
-    { name: 'Anika Rao', role: 'Design & Creative', image: '/team/member-4.jpg' },
-    { name: 'Kabir Singh', role: 'Technical Lead', image: '/team/member-5.jpg' },
-    { name: 'Zoya Khan', role: 'Outreach & Partnerships', image: '/team/member-6.jpg' },
-    { name: 'Ishaan Das', role: 'Flight Operations', image: '/team/member-7.jpg' },
-    { name: 'Tara Nair', role: 'Experience Lead', image: '/team/member-8.jpg' },
+    { name: 'Amlanjyoti', role: 'Aerotech Head', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790091019/IMG_20260628_105813.jpg_2_-removebg-preview_fk1bgy.png' },
+    { name: 'Biki', role: 'Technical', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790091182/ChatGPT_Image_Sep_21_2026_01_03_58_PM_fpgswf.png' },
+    { name: 'Ipshita', role: 'PR', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790092212/IMG_20260913_135616.jpg_1_-Photoroom_gnajgs.png' },
+    { name: 'Tushar', role: 'Motion', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790092148/IMG_20260913_135743.jpg_3_-Photoroom_obhudj.png' },
+    { name: 'Akashdeep', role: 'Finance', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790091046/IMG_1114_1_-Photoroom_u0oywd.png' },
+    { name: 'Himanshu', role: 'Management', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790091120/ChatGPT_Image_Sep_21_2026_02_08_34_PM_xqg3r5.png' },
+    { name: 'Swapnali', role: 'Graphics', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790092261/IMG_20260913_140201.jpg_2_-removebg-preview_fiqkk2.png' },
+    { name: 'Mung Chung', role: 'Content Manager', image: 'https://res.cloudinary.com/dnmobechs/image/upload/v1790090973/EVENT_HEAD-removebg-preview_tluflu.png' },
 ];
 
 function TeamCard({ member, index }) {
@@ -17,8 +17,6 @@ function TeamCard({ member, index }) {
             <div className="team-card__image-wrap">
                 <img src={member.image} alt={`${member.name}, ${member.role}`} className="team-card__image" />
                 <div className="team-card__shade" />
-                <span className="team-card__number">0{index + 1}</span>
-                <span className="team-card__orbit" aria-hidden="true" />
             </div>
             <div className="team-card__info">
                 <h3>{member.name}</h3>
@@ -40,17 +38,8 @@ export default function Team() {
                     </div>
                     <p className="team-intro">Eight minds. One runway. Meet the people turning Aerotech from an idea into an experience.</p>
                 </header>
-
-                <div className="team-rule"><span>03</span><i /><span>mission control</span></div>
-
                 <div className="team-grid">
                     {teamMembers.map((member, index) => <TeamCard key={member.name} member={member} index={index} />)}
-                </div>
-
-                <div className="team-footer-note">
-                    <span className="team-footer-note__line" />
-                    <span>Built with curiosity · flown with purpose</span>
-                    <span className="team-footer-note__line" />
                 </div>
             </div>
         </section>

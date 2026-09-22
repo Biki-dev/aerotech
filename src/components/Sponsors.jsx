@@ -83,8 +83,6 @@ export default function Sponsors() {
                     </div>
                 </header>
 
-                <div className="sponsors-rule"><span>01</span><i /><span>current partners</span></div>
-
                 <div className="sponsor-wall">
                     {currentSponsors.map((sponsor, index) => (
                         <PartnerCard key={sponsor.name} sponsor={sponsor} index={index} featured={index === 0} />
@@ -92,7 +90,6 @@ export default function Sponsors() {
                 </div>
 
                 <div className="sponsors-history">
-                    <div className="sponsors-rule sponsors-rule--muted"><span>02</span><i /><span>from the archive</span></div>
                     <div className="sponsors-history__heading">
                         <h3 className="font-anton">Past supporters</h3>
                         <p>A growing flight path, built together.</p>

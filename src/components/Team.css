@@ -9,12 +9,10 @@
 .team-rule i { height: 1px; flex: 1; background: linear-gradient(90deg, rgba(123,193,68,.5), rgba(255,255,255,.06)); }
 .team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .team-card { opacity: 0; transform: translateY(1.2rem); animation: team-reveal 700ms cubic-bezier(.2,.75,.25,1) forwards; animation-delay: var(--team-delay); }
-.team-card__image-wrap { position: relative; aspect-ratio: 1 / 1.12; overflow: hidden; border: 1px solid rgba(123,193,68,.4); border-radius: 1rem; background: linear-gradient(145deg, #d5f2b3 0%, #a4df72 44%, #65ae38 100%); box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,.16); }
+.team-card__image-wrap { position: relative; aspect-ratio: 1 / 1.12; overflow: hidden;  border-radius: 1rem; background: transparent; }
 .team-card__image { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(.92) contrast(1.02); opacity: .96; transform: scale(1.01); transition: filter 500ms ease, opacity 500ms ease, transform 700ms cubic-bezier(.2,.7,.2,1); }
 .team-card__shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(32,73,17,.42) 100%); pointer-events: none; }
 .team-card__number { position: absolute; top: .8rem; left: .8rem; display: grid; width: 1.8rem; height: 1.8rem; place-items: center; border-radius: 50%; background: rgba(255,255,255,.78); color: #315c20; font-size: .55rem; font-weight: 700; letter-spacing: .08em; }
-.team-card__orbit { position: absolute; right: -2.5rem; bottom: 2.4rem; width: 7rem; height: 7rem; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; transition: transform 600ms ease; }
-.team-card__orbit::after { content: ''; position: absolute; top: 50%; left: -3px; width: 5px; height: 5px; border-radius: 50%; background: #fff; box-shadow: 0 0 12px rgba(255,255,255,.7); }
 .team-card:hover .team-card__image { filter: saturate(1.08) contrast(1.04); opacity: 1; transform: scale(1.06); }
 .team-card:hover .team-card__orbit { transform: rotate(35deg) scale(1.15); }
 .team-card__info { padding: .85rem .2rem 0; }
