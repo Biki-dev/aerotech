@@ -1,3 +1,5 @@
+import CountUp from './CountUp';
+
 export default function About() {
     const stats = [
         { value: '500+', label: 'Participants' },
@@ -50,7 +52,13 @@ export default function About() {
                         {stats.map((stat) => (
                             <div key={stat.label} className="p-4 sm:p-5 md:p-8 border border-white/5 rounded-lg flex flex-col items-center justify-center text-center">
                                 <span className="font-anton text-3xl sm:text-4xl md:text-5xl text-brand-green block mb-1 sm:mb-2">
-                                    {stat.value}
+                                    <CountUp
+                                        from={0}
+                                        to={parseInt(stat.value, 10)}
+                                        separator=","
+                                        duration={1.8}
+                                    />
+                                    {stat.value.includes('+') ? '+' : ''}
                                 </span>
                                 <span className="text-white/30 text-xs font-medium tracking-[0.2em] uppercase">
                                     {stat.label}
