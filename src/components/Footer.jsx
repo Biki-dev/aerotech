@@ -29,7 +29,7 @@ export default function Footer() {
                         <span className="text-white/20 text-[10px] font-semibold tracking-[0.25em] uppercase block mb-4">Contact</span>
                         <div className="space-y-3 text-white/35 text-sm font-inter">
                             <p>aerotechaec2026@gmail.com</p>
-                            <p>+91 6003398115</p>
+                            <p>+91 9365098352</p>
                             <p className="text-white/20">Assam Engineering College</p>
                         </div>
                         {/* Social icons */}
